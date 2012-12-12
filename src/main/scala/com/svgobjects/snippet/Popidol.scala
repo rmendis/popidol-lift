@@ -5,8 +5,6 @@ import net.liftweb.http.S
 import net.liftweb.http.SHtml
 import net.liftweb.util.Helpers.strToCssBindPromoter
 import net.liftweb.http.SessionVar
-import net.liftweb.util._
-import Helpers._
 import net.liftweb.common.Box
 import net.liftweb.common.Full
 import net.liftweb.common.Empty
@@ -27,7 +25,7 @@ object Popidol {
       	case "will" => wvotes+=1 
       	case "garath" => gvotes+=1
       }
-      case Empty => {}
+      case _ => {}
     }
     
     "#garath [transform]" #> {"scale(" + gvotes/total + ")"} &
